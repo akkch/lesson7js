@@ -14,4 +14,4 @@ jobs:
         with:
           number1: 5
           number2: 10
-        run: echo "The sum is ${{ steps.jsaction.outputs.result }}"
+      - run: echo "The sum is ${{ steps.jsaction.outputs.result }}"
