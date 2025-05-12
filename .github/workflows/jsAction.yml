@@ -1,0 +1,18 @@
+name: jsaction
+on:
+  push:
+    branches: [main]
+
+jobs:
+  test-js-action:
+    name: job to test our JS action
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        uses:./
+        id: jsaction
+        with:
+          number1: 5
+          number2: 10
+        run: echo "The sum is ${{ steps.jsaction.outputs.result }}"
